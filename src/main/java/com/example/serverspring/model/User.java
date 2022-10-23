@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
+import java.util.Collection;
 
 @Data
 @ToString
@@ -25,7 +25,7 @@ public class User {
     private String email;
     @Indexed(unique = true)
     private String password;
-    private List<User> followers;
-    private List<User> following;
+    private Collection<User> followers;
+    private Collection<User> following;
 
 }
