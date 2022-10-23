@@ -37,7 +37,7 @@ public class PostController {
     @GetMapping
     public ResponseEntity<Map<String, Object>> getAllPosts() {
         String message = "successfully";
-        Collection<Post> posts = null;
+        Iterable<Post> posts = null;
         try {
             posts = this.postService.getPosts();
         }catch (Exception e) {
